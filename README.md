@@ -7,20 +7,20 @@
 
 ---
 
-##  功能预览
+## 功能预览
 
--  支持 YouTube 单视频 / 播放列表（单条）
--  实时下载进度 + 速度 + 剩余时间
--  多任务并发管理（可单独取消）
--  ffmpeg 无损重封装（修复时间戳）
--  Cookies.txt 支持（绕过登录限制）
--  依赖检测 + **一键自动安装**（macOS/Windows/Linux）
--  实时运行日志面板
--  深色玻璃拟态风格 UI
+- 支持 YouTube 单视频 / 播放列表（单条）
+- 实时下载进度 + 速度 + 剩余时间
+- 多任务并发管理（可单独取消）
+- ffmpeg 无损重封装（修复时间戳）
+- Cookies.txt 支持（绕过登录限制）
+- 依赖检测 + **一键自动安装**（macOS/Windows/Linux）
+- 实时运行日志面板
+- 深色玻璃拟态风格 UI
 
 ---
 
-##  快速开始
+## 快速开始
 
 ### 系统要求
 
@@ -30,6 +30,14 @@
 | [Node.js 18+](https://nodejs.org/)         | 前端构建             | 官网下载 / nvm                         |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | 下载核心（**必须**） | 见下方                                 |
 | [ffmpeg](https://ffmpeg.org/)              | 无损修复（可选）     | 见下方                                 |
+
+> ⚠️ **Tauri 系统依赖说明**
+>
+> 要在不同操作系统上编译并运行 Tauri 项目（尤其是你的开发环境），还需要安装以下基础系统依赖：
+>
+> - **Windows (重要)**: 必须安装 [Visual Studio C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) 以及 [WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)。请参阅官方文档：[Tauri Windows Prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites#windows)
+> - **macOS**: 需要安装 Xcode 命令行工具 (`xcode-select --install`)。
+> - **Linux**: 需要安装各种包含 WebKit 和构建工具的开发库包。请参阅官方文档：[Tauri Linux Prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites#linux)
 
 ### 安装下载依赖
 
@@ -52,11 +60,11 @@ winget install --id Gyan.FFmpeg -e
 sudo apt install yt-dlp ffmpeg
 ```
 
->  也可以在应用内点击右上角 **「依赖检测」** 徽章 → 对各工具点击「一键安装」自动完成安装。
+> 也可以在应用内点击右上角 **「依赖检测」** 徽章 → 对各工具点击「一键安装」自动完成安装。
 
 ---
 
-##  开发运行
+## 开发运行
 
 ```bash
 # 克隆项目
@@ -74,7 +82,7 @@ npm run tauri dev
 
 ---
 
-##  打包发布
+## 打包发布
 
 ```bash
 # 生成平台安装包
@@ -89,7 +97,7 @@ npm run tauri build
 
 ---
 
-##  关于 Cookies.txt
+## 关于 Cookies.txt
 
 部分视频（会员内容、年龄限制、地区限制）需要提供 Cookies 才能正常下载。
 
@@ -102,7 +110,7 @@ npm run tauri build
 
 ---
 
-##  格式/画质选项
+## 格式/画质选项
 
 | 选项             | 说明                      |
 | ---------------- | ------------------------- |
@@ -115,7 +123,7 @@ npm run tauri build
 
 ---
 
-##  项目结构
+## 项目结构
 
 ```
 ytdl-app/
@@ -133,7 +141,7 @@ ytdl-app/
 
 ---
 
-##  技术栈
+## 技术栈
 
 | 层       | 技术                                       |
 | -------- | ------------------------------------------ |
@@ -146,6 +154,6 @@ ytdl-app/
 
 ---
 
-##  License
+## License
 
 MIT
